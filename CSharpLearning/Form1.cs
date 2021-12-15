@@ -103,5 +103,9 @@ namespace CSharpLearning
 
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }
