@@ -97,5 +97,11 @@ namespace CSharpLearning
         {
             btnSettings.BackColor = Color.FromArgb(24, 30, 54);
         }
+
+        private void userAvatar_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
