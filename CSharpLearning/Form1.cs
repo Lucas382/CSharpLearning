@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 namespace CSharpLearning
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
@@ -25,7 +25,7 @@ namespace CSharpLearning
             int nHeightEllipse
             );
         
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -107,5 +107,27 @@ namespace CSharpLearning
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        Point lastPoint;
+        private void FormMain_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        
+        private void FormDrag_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+
     }
 }

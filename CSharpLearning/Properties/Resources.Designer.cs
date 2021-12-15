@@ -93,6 +93,16 @@ namespace CSharpLearning.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Graph {
+            get {
+                object obj = ResourceManager.GetObject("Graph", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home___1391_ {
             get {
                 object obj = ResourceManager.GetObject("home [#1391]", resourceCulture);
